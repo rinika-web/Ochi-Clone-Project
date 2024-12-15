@@ -48,7 +48,7 @@ function Header() {
         <div className="public px-5 py-1 rounded-full">
           <motion.button
             initial={{ backgroundColor: "transparent" }}
-            whileHover={{ backgroundColor: "#004d43", color: "#fff" }}
+            whileHover={{ backgroundColor: "#004d43", color: "#fff", scale: 1.05 }}
             whileTap={{ scale: 1, backgroundColor: "#003A33" }}
             transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.3 }}
             className="relative w-[210px] px-1 py-2 text-lg font-medium text-[#090202] border-[1px] rounded-full overflow-hidden border-[#090202]">

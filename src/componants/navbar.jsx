@@ -7,15 +7,13 @@ function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
+    let timeout;
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-
-        setShowNavbar(false);
-      } else {
-
-        setShowNavbar(true);
-      }
-      setLastScrollY(window.scrollY);
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        setShowNavbar(window.scrollY < lastScrollY);
+        setLastScrollY(window.scrollY);
+      },10); 
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -30,7 +28,7 @@ function Navbar() {
       className={`w-full fixed h-4 top-0 bg-[#fac37130] shadow-lg z-[999] px-20 py-8 flex justify-between items-center transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'
         }`}
     >
-      <div className="logo">
+      <div className="logo w-24 h-auto sm:w-16">
         <img src={logo} alt="logo" />
       </div>
       <div className="links">

@@ -1093,3 +1093,115 @@ export default Eyes;
 
 
 
+//footer
+
+import React from 'react'
+
+function Footer() {
+  const socialLinks = [
+    { name: 'Instagram', url: '#instagram' },
+    { name: 'Facebook', url: '#facebook' },
+    { name: 'LinkedIn', url: '#linkedin' },
+  ];
+
+
+  return (
+    <div className='w-full h-full '>
+      <div className="both flex flex-row w-full justify-between font-founders px-12 gap-[10vw]">
+        <div className="eyeopenings w-1/2 ">
+          <h1 className="text-[6.5vw] tracking-normal uppercase font-bold text-[#010409ee]">
+            eye-
+          </h1>
+          <h1 className="text-[6.5vw] uppercase tracking-tight mt-[-3.3vw] font-bold text-[#010409ee]">
+            opening
+          </h1>
+        </div>
+        <div className="p w-1/2 mr-16 ">
+          <h1 className=" font-bold uppercase text-[6.5vw] tracking-tight text-[#010409ee]">presentation</h1>
+          <div className="flex flex-col justify-between text-[1.5vw] text-[#010409ee]">
+            S:
+            {['Instagram', 'Facebook', 'Linkedin'].map((item, index) => (
+              <div key={index} className="">
+                <a href="#" className="relative inline-block font-medium">
+                  {item}
+                  <span className="absolute left-0 bottom-0 h-[2px] w-full bg-[#010409ee] transform scale-x-0 transition-transform duration-300 ease-in-out origin-left hover:scale-x-100"></span>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  )
+}
+
+export default Footer
+
+
+//nav bar
+
+import React, { useState, useEffect } from 'react';
+import logo from '../assets/logo.svg';
+import { motion } from 'framer-motion';
+
+function Navbar() {
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+
+        setShowNavbar(false);
+      } else {
+
+        setShowNavbar(true);
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
+
+  return (
+    <div
+      className={`w-full fixed h-4 top-0 bg-[#fac37130] shadow-lg z-[999] px-20 py-8 flex justify-between items-center transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'
+        }`}
+    >
+      <div className="logo w-24 h-auto sm:w-16">
+        <img src={logo} alt="logo" />
+      </div>
+      <div className="links">
+        {["services", "Our work", "About us", "Insights", "Contact us"].map(
+          (item, index) => (
+            <motion.a
+              key={index}
+              href={`#${item.replace(/\s+/g, '').toLowerCase()}`}
+              className={`capitalize text-xl text-[#090202] font-nemu font-medium p-4 relative group ${index === 4 && "ml-32"
+                }`}
+            >
+              <motion.span
+                className="inline-block hover:underline"
+                initial={{ y: 0 }}
+                whileHover={{
+                  y: [-2, 2, -2],
+                  transition: { duration: 0.5, ease: "easeInOut", repeat: Infinity },
+                }}
+              >
+                {item}
+              </motion.span>
+
+            </motion.a>
+          )
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default Navbar;

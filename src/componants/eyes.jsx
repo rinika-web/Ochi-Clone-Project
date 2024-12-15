@@ -26,7 +26,7 @@ function Eyes() {
     <div className=" bg-[#fac37130]">
       <div className="main w-full h-screen overflow-hidden mt-[-20vw] ">
         <div data-scroll data-scroll-section data-scroll-speed='.5' className=" absolute bg-center">
-          <img src={green} alt="green" className="w-full " />
+          <img src={green} alt="background green image" className="w-full " />
         </div>
 
         <div className=" relative rounded-3xl inline-flex left-[30vw] top-[19vw] bg-[#1a99937600]">

@@ -1,6 +1,7 @@
-const plugin = require('tailwindcss/plugin');
+import plugin from 'tailwindcss/plugin';
+import lineClamp from '@tailwindcss/line-clamp';
 
-module.exports = {
+export default {
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx,woff}',
@@ -14,7 +15,7 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/line-clamp'),
+    lineClamp,
     plugin(function ({ addBase }) {
       addBase({
         '@font-face': {

@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react'
 import './index.css'
-import Navbar from './componants/navbar'
-import Header from "./componants/header"
-import Weareochi from './componants/weareochi'
-import Text from './componants/text'
-import Eyes from './componants/eyes'
-import Featured from './componants/featured'
-import Cards from './componants/cards'
-import Footer from './componants/Footer'
+import Navbar from './components/navbar'
+import Header from "./components/header"
+import Weareochi from './components/weareochi'
+import Text from './components/text'
+import Eyes from './components/eyes'
+import Featured from './components/featured'
+import Cards from './components/cards'
+import Footer from './components/Footer'
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 

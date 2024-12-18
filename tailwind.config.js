@@ -1,5 +1,5 @@
 import plugin from 'tailwindcss/plugin';
-import lineClamp from '@tailwindcss/line-clamp';
+
 
 export default {
   content: [
@@ -15,7 +15,7 @@ export default {
     },
   },
   plugins: [
-    lineClamp,
+
     plugin(function ({ addBase }) {
       addBase({
         '@font-face': {

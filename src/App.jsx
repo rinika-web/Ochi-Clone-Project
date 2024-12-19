@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import './index.css'
-import Navbar from './components/Navbar'
+import Navbar from './components/navbar'
 import Header from "./components/Header"
 import Weareochi from './components/Weareochi'
 import Text from './components/Text'

@@ -7,7 +7,7 @@ function Featured() {
   const [activeTitle, setActiveTitle] = useState(null);
 
   return (
-    <div className="main w-full h-full mt-[-10vw] bg-[#d07f46f3]">
+    <div data-scroll data-scroll-section data-scroll-speed='.3' className="main w-full h-full mt-[-10vw] bg-[#d07f46f3]">
       <div className="headline px-[5.5vw] text-[3.8vw] text-justify font-light font-nemu">
         Featured Project
         <hr className="mt-5 border-[#090202]" />

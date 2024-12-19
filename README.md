@@ -119,7 +119,19 @@ $ npm install @mui/icons-material @mui/material
 ## Screenshots 🖼️
 
 
-Example:
+![ochiSS](https://github.com/user-attachments/assets/3c967e97-bf55-4ebe-aad8-0db866f7d4b8)
+
+---
+
+![ochiSS2 (2)](https://github.com/user-attachments/assets/88030542-051b-438b-838f-489d4384a2d2)
+
+---
+
+![ochiSS4](https://github.com/user-attachments/assets/be306ffa-21ce-4833-a5c5-7e7b45963a77)
+
+---
+
+![ochiSS3](https://github.com/user-attachments/assets/76e29e1d-baf2-4dde-aaca-b0f36d713509)
 
 ---
 

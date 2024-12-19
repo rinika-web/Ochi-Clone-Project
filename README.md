@@ -125,9 +125,9 @@ Example:
 
 ## Deployment 🚀
 
-To deploy this project to a live system, 
+The project has been deployed and is live at the following link:
 
- official documentation for detailed deployment steps.
+https://ochi-clone-project-imvt.vercel.app
 
 ---
 
